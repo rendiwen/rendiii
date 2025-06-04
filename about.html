@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <title>NONTON FILM.ID</title>
+</head>
+<body>
+
+ <!-- navbar -->
+ <nav class="rendi_navbar" id="rendi_navbar">
+    <div class="rendi_logonav">
+    <img src="img/LOGOOO.png" height="70px" width="70px">
+    </div>
+  <ul class="rendi_menu">
+    <li><a href="index.html">HOME</a></li>
+    <li><a href="action.html">ACTION</a></li>
+        <li><a href="sports.html">SPORTS</a></li>
+        <li><a href="komedi.html">KOMEDI</a></li>
+        <li><a href="horor.html">HOROR</a></li>
+        <li><a href="romance.html">ROMANCE</a></li>
+        <li><a href="anime.html">ANIME</a></li>
+        <li><a href="about.html">ABOUT</a></li>
+        
+     </ul>
+        </li>
+        </nav>
+  <header>
+  </header>
+<div>
+    
+    <center><h1>Tentang Kami</h1></center>
+    <center><img src="img/LOGOOO.png" width="150" height="150"></center>
+    <section class="rendi_teks"><br>
+<p> Nonton film adalah sebuah website yang menyediakan beberapa film yaitu dimulai dari film yang ber-genre 
+    komedi,action,horor,romance hingga menyediakan juga anime. selain itu juga nonton film.id memberikan informasi dimana film film tersebut apakah masuk kedalam nominasi terbaik terlaris hingga mendapatkan penghasilan yang cukup.
+    selain itu juga nonton film.id menyediakan film barat hingga asia dimana peminat yang nonton juga cukup banyak.mungkin jika kalian mempunyai ide yang menarik bisa hubungi kepada nomor yang tertera atau medi sosial yang tertera terimakasih.
+
+</p>
+    </section>
+</div>
+<br>
+<center><h1>KRITIK SARAN UNTUK WEBSITE INI</h1></center>
+  <form id="feedbackForm">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="message">Message:</label>
+    <textarea id="messageText" name="message" rows="4" required></textarea>
+
+    <button type="button" onclick="submitForm()">Submit Feedback</button>
+
+    <div id="message"></div>
+  </form>
+
+  <script>
+    function submitForm() {
+      var name = document.getElementById('name').value;
+      var email = document.getElementById('email').value;
+      var message = document.getElementById('messageText').value;
+      var messageContainer = document.getElementById('message');
+
+      // Validasi sederhana
+      if (name.trim() === '' || email.trim() === '' || message.trim() === '') {
+        showMessage('error', 'Please fill in all fields.');
+        return;
+      }
+
+      // Kirim data feedback ke server (simulasi)
+      // Di sini, biasanya, Anda akan menggunakan AJAX atau API untuk mengirim data ke server
+      // Dalam contoh ini, hanya menampilkan pesan feedback
+      var feedbackMessage = `Thank you, ${name}! Your feedback has been received.`;
+      showMessage('success', feedbackMessage);
+    }
+
+    function showMessage(type, text) {
+      var messageContainer = document.getElementById('message');
+      messageContainer.textContent = text;
+      messageContainer.className = type;
+      messageContainer.style.display = 'block';
+    }
+  </script>
+
+</body>
+</html>
